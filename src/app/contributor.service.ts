@@ -13,7 +13,7 @@ export class ContributorService {
   }
 
   getContributors() {
-  return this.contributors;
+    return this.contributors;
   }
 
   addContributor(newContributor: Contributor) {
