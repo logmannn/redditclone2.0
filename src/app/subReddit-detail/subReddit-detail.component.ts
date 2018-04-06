@@ -47,7 +47,7 @@ export class SubRedditDetailComponent implements OnInit {
     }
   }
 
-  submitaPost(text, title) {
+  submitaPost(subRedditToDisplay, text, title) {
     // console.log(text);
     if (this.showSubmitDiv == false) {
       this.showSubmitDiv = true;
@@ -55,7 +55,7 @@ export class SubRedditDetailComponent implements OnInit {
       this.showSubmitDiv = false;
     }
     // console.log(this.subRedditToDisplay);
-    this.subRedditService.addPost(this.subRedditToDisplay, text, title);
+    this.subRedditService.addPost(subRedditToDisplay, text, title);
   }
 
   goToDetailPage(clickedSubReddit) {
