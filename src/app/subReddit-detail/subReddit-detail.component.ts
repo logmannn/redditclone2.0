@@ -41,4 +41,4 @@ export class SubRedditDetailComponent implements OnInit {
     this.router.navigate(['subReddits', clickedSubReddit.$key]);
   };
 
-  }
+}

@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EditSubRedditComponent } from './edit-subReddit/edit-subReddit.component';
 import { masterFirebaseConfig } from './api-keys';
 import { SubRedditHeaderHeaderLinksComponent } from './sub-reddit-header-header-links/sub-reddit-header-header-links.component';
+import { Welcome2Component } from './welcome2/welcome2.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     SubRedditDetailComponent,
     AdminComponent,
     EditSubRedditComponent,
-    SubRedditHeaderHeaderLinksComponent
+    SubRedditHeaderHeaderLinksComponent,
+    Welcome2Component
   ],
   imports: [
     BrowserModule,

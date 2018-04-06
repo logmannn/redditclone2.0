@@ -1,15 +1,17 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { Welcome2Component } from './welcome2/welcome2.component';
 import { AboutComponent }   from './about/about.component';
 import { SubRedditComponent }   from './subReddits/subReddits.component';
 import { SubRedditDetailComponent } from './subReddit-detail/subReddit-detail.component'
 import { AdminComponent } from './admin/admin.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',
-    component: WelcomeComponent
+    component: Welcome2Component
   },
   {
    path: 'about',

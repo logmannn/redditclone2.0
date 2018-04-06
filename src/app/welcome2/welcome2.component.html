@@ -1,16 +1,18 @@
-Timestamp<!-- <div class="" *ngFor="let subReddit of subReddits | async">
+<!-- <div class="" *ngFor="let subReddit of subReddits | async">
   <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
 </div> -->
-
-<h2 class="center subReddits"><span *ngIf="currentRoute === '/admin'">Edit </span>SubReddits</h2>
 
 <div class="card wholecard" *ngFor="let subReddit of subReddits | async">
   <div class="card-body">
     <h3 (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{subReddit.description}}
-      <hr>
-      <app-edit-subReddit [selectedSubReddit]="subReddit"></app-edit-subReddit>
+      <div class="card wholecard" *ngFor="let subRedditToDisplay of (subRedditToDisplay | async)?.posts">
+        {{subRedditToDisplay.title}}<br>
+        {{subRedditToDisplay.body}}<br>
+        Reward Level: {{subRedditToDisplay.rewardLock}}<br>
+        Timestamp: {{subRedditToDisplay.timePosted}}<br>
+      </div>
     </div>
   </div>
 </div>
