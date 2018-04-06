@@ -6,6 +6,7 @@ import { SubRedditService } from '../subReddit.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 
+
 @Component({
   selector: 'app-subReddit-detail',
   templateUrl: './subReddit-detail.component.html',
@@ -30,5 +31,6 @@ export class SubRedditDetailComponent implements OnInit {
     this.subRedditToDisplay = this.subRedditService.getSubRedditById(this.subRedditId);
     this.postBodyToDisplay = this.subRedditToDisplay;
     }
+
 
   }
