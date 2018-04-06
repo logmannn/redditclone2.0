@@ -16,15 +16,15 @@ export class AdminComponent {
   ngOnInit() {
   }
 
-  submitForm(organization: string, project: string, description: string, lowValue: number, lowDescription: string, mediumValue: number, mediumDescription: string, highValue: number, highDescription: string) {
-    let Rewards = {
-      low: {value: lowValue, description: lowDescription},
-      medium: {value: mediumValue, description: mediumDescription},
-      high: {value: highValue, description: highDescription}
-    };
+  submitForm(organization: string, project: string, description: string) {
+    // let Rewards = {
+    //   low: {value: lowValue, description: lowDescription},
+    //   medium: {value: mediumValue, description: mediumDescription},
+    //   high: {value: highValue, description: highDescription}
+    // };
     let Posts = {
     };
-    let newSubReddit: SubReddit = new SubReddit(organization, project, description, Rewards, Posts);
+    let newSubReddit: SubReddit = new SubReddit(organization, project, description, Posts);
     this.subRedditService.addSubReddit(newSubReddit);
   }
 }
