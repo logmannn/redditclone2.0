@@ -1,12 +1,8 @@
+<h6 class="top-text">{{(subRedditToDisplay | async)?.organization}}</h6>
 
 <div class="row">
 
   <div class="col-lg-9">
-    <h3>{{(subRedditToDisplay | async)?.organization}}</h3>
-    <h4>{{(subRedditToDisplay | async)?.project}}</h4>
-    <p>{{(subRedditToDisplay | async)?.description}}</p><br>
-
-    <h4>Posts</h4>
     <div class="card wholecard" *ngFor="let subRedditToDisplay of (subRedditToDisplay | async)?.posts">
       {{subRedditToDisplay.title}}<br>
       {{subRedditToDisplay.body}}<br>
@@ -16,7 +12,8 @@
 
   </div>
   <div class="col-lg-3">
-    sidebar
+    <h4>{{(subRedditToDisplay | async)?.project}}</h4>
+    <p>{{(subRedditToDisplay | async)?.description}}</p><br>
     <!-- <b>Low Reward</b>
     <ul>
       <li>Value: {{(subRedditToDisplay | async)?.rewards.low.value | currency}}</li>

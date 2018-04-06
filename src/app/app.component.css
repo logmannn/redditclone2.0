@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
