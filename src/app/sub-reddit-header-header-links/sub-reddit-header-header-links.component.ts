@@ -19,10 +19,7 @@ export class SubRedditHeaderHeaderLinksComponent implements OnInit {
     this.subReddits = this.subRedditService.getSubReddits();
   }
 
-  // goToDetailPage(clickedSubReddit) {
-  //   this.router.navigate(['', '']);
-  //   this.router.navigate(['subReddits', clickedSubReddit.$key]);
-  //
-  // };
-
+  goToDetailPage(clickedSubReddit) {
+    this.router.navigate(['subReddits', clickedSubReddit.$key]);
+  };
 }

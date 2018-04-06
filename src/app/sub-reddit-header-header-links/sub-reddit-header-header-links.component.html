@@ -2,5 +2,6 @@
 
     <!-- <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span> -->
 
-    <a routerLink="./subReddits/{{subReddit.$key}}" routerLinkActive="active">{{subReddit.organization}}</a>
+    <a routerLink="./subReddits/{{subReddit.$key}}" routerLinkActive="on"
+[routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">{{subReddit.organization}}</a>
 </div>

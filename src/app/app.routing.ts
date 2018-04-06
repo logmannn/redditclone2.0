@@ -26,6 +26,10 @@ const appRoutes: Routes = [
  {
    path: 'admin',
    component: AdminComponent
+ },
+ {
+   path: 'askreddit/:id',
+   component: SubRedditDetailComponent
  }
 ];
 
