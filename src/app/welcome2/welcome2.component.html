@@ -1,8 +1,12 @@
+<!-- <div class="" *ngFor="let subReddit of subReddits | async">
+  <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
+</div> -->
+
 <div class="card wholecard" *ngFor="let subReddit of subReddits | async">
   <div class="card-body">
-    <!-- <h3 (click)="goToDetailPage(subReddit)"></h3> -->
+    <!-- <h3 ></h3> -->
     <div class="card wholecard" *ngFor="let subRedditToDisplay of subReddit.posts">
-      {{subRedditToDisplay.title}} to {{subReddit.organization}}
+      {{subRedditToDisplay.title}}<br>to <span class="subreddit" (click)="goToDetailPage(subReddit)">{{subReddit.organization}}</span>
     </div>
   </div>
 </div>

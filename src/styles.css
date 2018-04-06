@@ -38,3 +38,7 @@ label, input {
   color: black;
   font-weight: 400;
 }
+
+span {
+  display: inline
+}
