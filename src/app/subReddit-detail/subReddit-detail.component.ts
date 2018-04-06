@@ -19,6 +19,7 @@ export class SubRedditDetailComponent implements OnInit {
   subRedditToDisplay;
   postBodyToDisplay;
   subReddits: FirebaseListObservable<any[]>;
+  showSubmitDiv = false;
 
 
   constructor(
@@ -36,6 +37,14 @@ export class SubRedditDetailComponent implements OnInit {
     this.postBodyToDisplay = this.subRedditToDisplay;
     this.subReddits = this.subRedditService.getSubReddits();
     }
+
+  newpost() {
+    if (this.showSubmitDiv == false) {
+      this.showSubmitDiv = true;
+    } else {
+      this.showSubmitDiv = false;
+    }
+  }
 
   goToDetailPage(clickedSubReddit) {
     this.router.navigate(['subReddits', clickedSubReddit.$key]);

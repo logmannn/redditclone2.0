@@ -16,6 +16,10 @@ export class SubRedditService {
     return this.subReddits;
   }
 
+  // newpost() {
+  //   console.log("here")
+  // }
+
   addSubReddit(newSubReddit: SubReddit) {
     console.log("reached");
     console.log(newSubReddit);

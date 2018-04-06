@@ -1,1 +1,14 @@
-.subreddit {display: inline !important; }
+.subreddit {
+  display: inline !important;
+  /*is display none no matter what?*/
+  color: blue;
+  cursor: pointer;
+}
+
+.subReddit:hover {
+  text-decoration: underline;
+}
+
+.subRedditdiv {
+  margin-bottom: 15px;
+}

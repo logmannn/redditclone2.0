@@ -1,12 +1,20 @@
 <!-- <div class="" *ngFor="let subReddit of subReddits | async">
   <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
 </div> -->
-
-<div class="card wholecard" *ngFor="let subReddit of subReddits | async">
-  <div class="card-body">
-    <!-- <h3 ></h3> -->
-    <div class="card wholecard" *ngFor="let subRedditToDisplay of subReddit.posts">
-      {{subRedditToDisplay.title}}<br>to <span class="subreddit" (click)="goToDetailPage(subReddit)">{{subReddit.organization}}</span>
+<div class="row">
+  <div class="col-lg-9">
+    <div class="" *ngFor="let subReddit of subReddits | async">
+        <div class="subRedditdiv" *ngFor="let subRedditToDisplay of subReddit.posts">
+          <div class="subRedditToDisplayTitle">
+            {{subRedditToDisplay.title}}
+          </div>
+          <div class="description">
+            submitted {{subRedditToDisplay.timePosted}} to <div class="subreddit" (click)="goToDetailPage(subReddit)">{{subReddit.organization}}</div>
+          </div>
+        </div>
     </div>
+  </div>
+  <div class="col-lg-3">
+    Login Placeholder
   </div>
 </div>

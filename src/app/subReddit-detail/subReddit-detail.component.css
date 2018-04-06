@@ -3,3 +3,67 @@
   top: 42px;
   left: 130px;
 }
+
+.newpost {
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  width: 100%;
+  border: 1px solid grey;
+  padding: 5px;
+  cursor: pointer
+}
+
+.newpost:hover {
+  background: blue;
+  color: white;
+  cursor: pointer
+}
+
+.title {
+  font-size: medium;
+  font-weight: normal;
+  margin-bottom: 1px;
+}
+
+.submitPost {
+  display: block;
+  margin-bottom: 20px;
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.finalizePost {
+  display: block;
+  margin-top: 20px;
+}
+
+.submitAPost {
+  background-color: #CEE3F8;
+  width: 50%;
+  min-width: 350px;
+  max-width: 650px;
+  height: 300px;
+  display: table;
+  margin-top: 0em;
+  top: 50%;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 20px;
+}
+
+.alignRight {
+  right: 10px;
+  position: absolute;
+  top: 0px;
+}
+
+.closeThis {
+  cursor: pointer
+}
+
+.row {
+  width: 100%;
+}
