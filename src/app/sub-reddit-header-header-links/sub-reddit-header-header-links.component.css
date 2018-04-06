@@ -6,6 +6,8 @@
   top: 0;
   left: 0;
   border-bottom: 1px solid grey;
+  background: #F0F0F0;
+  padding-left: 10px;
 }
 
 .headerlink {
@@ -15,7 +17,12 @@
 .more {
   right: 0px;
   position: absolute;
-  top: 0px;
-  background: #90EE90;
+  top: 6px;
+  background: #F0F0F0;
   padding-left: 10px;
+}
+
+a {
+  color: black;
+  font-size: 11px;
 }
