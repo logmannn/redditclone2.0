@@ -36,9 +36,17 @@ export class SubRedditDetailComponent implements OnInit {
     this.subRedditToDisplay = this.subRedditService.getSubRedditById(this.subRedditId);
     this.postBodyToDisplay = this.subRedditToDisplay;
     this.subReddits = this.subRedditService.getSubReddits();
-    }
+  }
 
   newpost() {
+    if (this.showSubmitDiv == false) {
+      this.showSubmitDiv = true;
+    } else {
+      this.showSubmitDiv = false;
+    }
+  }
+
+  submitAPost() {
     if (this.showSubmitDiv == false) {
       this.showSubmitDiv = true;
     } else {
