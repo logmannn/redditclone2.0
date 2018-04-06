@@ -1,7 +1,5 @@
-<div *ngFor="let subReddit of subReddits | async">
-
-    <!-- <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span> -->
-
-    <a routerLink="./subReddits/{{subReddit.$key}}" routerLinkActive="on"
-[routerLinkActiveOptions]="{ exact: false, __change_detection_hack__: id }">{{subReddit.organization}}</a>
+<div class="headerlinks">
+  <div class="headerlink" *ngFor="let subReddit of subReddits | async">
+      <a href="/subReddits/{{subReddit.$key}}">{{subReddit.organization}}</a> | </div>
+  <a class="more" routerLink="subReddit">More>></a>
 </div>
