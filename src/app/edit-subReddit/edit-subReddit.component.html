@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="col-md-4">
+
+    <label>New SubReddit Organization:</label>
+    <input [(ngModel)]="selectedSubReddit.organization">
+
+    <label>New SubReddit Project:</label>
+    <input [(ngModel)]="selectedSubReddit.project">
+
+    <label>New SubReddit Description:</label>
+    <textarea [(ngModel)]="selectedSubReddit.description"></textarea>
+  </div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h3>SubReddit's Rewards:</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-body">
+              <label><b>Low Reward:</b></label>
+              <label>Value:</label>
+              <input [(ngModel)]="selectedSubReddit.rewards.low.value">
+              <label>Description:</label>
+              <textarea [(ngModel)]="selectedSubReddit.rewards.low.description"></textarea>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <label><b>Medium Reward:</b></label>
+              <label>Value:</label>
+              <input [(ngModel)]="selectedSubReddit.rewards.medium.value">
+              <label>Description:</label>
+              <textarea [(ngModel)]="selectedSubReddit.rewards.medium.description"></textarea>
+            </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card-body">
+                <label><b>High Reward:</b></label>
+                <label>Value:</label>
+                <input [(ngModel)]="selectedSubReddit.rewards.high.value">
+                <label>Description:</label>
+                <textarea [(ngModel)]="selectedSubReddit.rewards.high.description"></textarea>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="update" (click)="beginUpdatingSubReddit(selectedSubReddit)">Update</button>
+<hr>
+<h3 class="center subReddits">Add Posts</h3>
+<!---->
+
+<hr>
+<button (click)="beginDeletingSubReddit(selectedSubReddit)">Delete</button>

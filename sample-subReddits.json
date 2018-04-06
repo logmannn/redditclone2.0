@@ -1,4 +1,4 @@
-{ "contributors": [{
+{ "subReddits": [{
     "organization": " Wylie Wonkers",
     "project": "Awesome playing kard art",
     "description": "I'm a lone paintbrush behind Reign of Sin and Rule of Virtue - a series of hand-painted playing card illustrations inspired by the deadly sins and heavenly virtues.  My playing card projects are creator-owned, one-woman efforts made possible entirely by the continuing support of my amazing patrons! Thank you for joining me on this journey through strange (and often dangerous) lands...",
@@ -31,7 +31,7 @@
           "body": "I've just posted the first process v",
           "likes": [],
           "comments": [],
-          "rewardLock": ""          
+          "rewardLock": ""
         }
       ]
     }

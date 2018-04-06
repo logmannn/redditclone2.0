@@ -7,14 +7,14 @@ import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AboutComponent } from './about/about.component';
-import { ContributorComponent } from './contributors/contributors.component';
-import { ContributorDetailComponent } from './contributor-detail/contributor-detail.component';
+import { SubRedditComponent } from './subReddits/subReddits.component';
+import { SubRedditDetailComponent } from './subReddit-detail/subReddit-detail.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { EditContributorComponent } from './edit-contributor/edit-contributor.component';
+import { EditSubRedditComponent } from './edit-subReddit/edit-subReddit.component';
 import { masterFirebaseConfig } from './api-keys';
 
 export const firebaseConfig = {
@@ -30,10 +30,10 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    ContributorComponent,
-    ContributorDetailComponent,
+    SubRedditComponent,
+    SubRedditDetailComponent,
     AdminComponent,
-    EditContributorComponent
+    EditSubRedditComponent
   ],
   imports: [
     BrowserModule,

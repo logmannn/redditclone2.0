@@ -1,0 +1,12 @@
+<h2 class="center subReddits"><span *ngIf="currentRoute === '/admin'">Edit </span>SubReddits</h2>
+
+<div class="card wholecard" *ngFor="let subReddit of subReddits | async">
+  <div class="card-body">
+    <h3 (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{subReddit.description}}
+      <hr>
+      <app-edit-subReddit [selectedSubReddit]="subReddit"></app-edit-subReddit>
+    </div>
+  </div>
+</div>

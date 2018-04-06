@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { ContributorService } from '../contributor.service';
-import { Contributor } from '../contributor.model';
+import { SubRedditService } from '../subReddit.service';
+import { SubReddit } from '../subReddit.model';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [ContributorService]
+  providers: [SubRedditService]
 })
 
 export class AdminComponent {
 
-  constructor(private contributorService: ContributorService) { }
+  constructor(private subRedditService: SubRedditService) { }
 
   ngOnInit() {
   }
@@ -24,7 +24,7 @@ export class AdminComponent {
     };
     let Posts = {
     };
-    let newContributor: Contributor = new Contributor(organization, project, description, Rewards, Posts);
-    this.contributorService.addContributor(newContributor);
+    let newSubReddit: SubReddit = new SubReddit(organization, project, description, Rewards, Posts);
+    this.subRedditService.addSubReddit(newSubReddit);
   }
 }

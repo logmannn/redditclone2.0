@@ -2,8 +2,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent }   from './about/about.component';
-import { ContributorComponent }   from './contributors/contributors.component';
-import { ContributorDetailComponent } from './contributor-detail/contributor-detail.component'
+import { SubRedditComponent }   from './subReddits/subReddits.component';
+import { SubRedditDetailComponent } from './subReddit-detail/subReddit-detail.component'
 import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
@@ -16,12 +16,12 @@ const appRoutes: Routes = [
    component: AboutComponent
  },
  {
-  path: 'contributor',
-  component: ContributorComponent
+  path: 'subReddit',
+  component: SubRedditComponent
 },
 {
-   path: 'contributors/:id',
-   component: ContributorDetailComponent
+   path: 'subReddits/:id',
+   component: SubRedditDetailComponent
  },
  {
    path: 'admin',
