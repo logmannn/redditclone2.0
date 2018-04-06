@@ -1,3 +1,7 @@
+<div class="" *ngFor="let subReddit of subReddits | async">
+  <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
+</div>
+
 <div class="row">
 
   <div class="col-lg-9">
