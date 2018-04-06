@@ -1,4 +1,6 @@
 <div *ngFor="let subReddit of subReddits | async">
 
-    <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
+    <!-- <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span> -->
+
+    <a routerLink="./subReddits/{{subReddit.$key}}" routerLinkActive="active">{{subReddit.organization}}</a>
 </div>
