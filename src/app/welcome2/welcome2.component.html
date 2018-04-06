@@ -1,18 +1,8 @@
-<!-- <div class="" *ngFor="let subReddit of subReddits | async">
-  <span (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}} </span>
-</div> -->
-
 <div class="card wholecard" *ngFor="let subReddit of subReddits | async">
   <div class="card-body">
-    <h3 (click)="goToDetailPage(subReddit)">{{subReddit.organization}}'s {{subReddit.project}}</h3>
-    <div *ngIf="currentRoute === '/admin'">
-      {{subReddit.description}}
-      <div class="card wholecard" *ngFor="let subRedditToDisplay of (subRedditToDisplay | async)?.posts">
-        {{subRedditToDisplay.title}}<br>
-        {{subRedditToDisplay.body}}<br>
-        Reward Level: {{subRedditToDisplay.rewardLock}}<br>
-        Timestamp: {{subRedditToDisplay.timePosted}}<br>
-      </div>
+    <!-- <h3 (click)="goToDetailPage(subReddit)"></h3> -->
+    <div class="card wholecard" *ngFor="let subRedditToDisplay of subReddit.posts">
+      {{subRedditToDisplay.title}} to {{subReddit.organization}}
     </div>
   </div>
 </div>

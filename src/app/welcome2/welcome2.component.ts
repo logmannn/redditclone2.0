@@ -18,15 +18,11 @@ import { Location } from '@angular/common';
 export class Welcome2Component implements OnInit {
   subReddits: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  subRedditToDisplay;
-  postBodyToDisplay;
 
   constructor(private router: Router, private subRedditService: SubRedditService) {}
 
   ngOnInit(){
     this.subReddits = this.subRedditService.getSubReddits();
-    this.subRedditToDisplay = this.subRedditService.getSubRedditById(this.subRedditId);    
-    this.postBodyToDisplay = this.subRedditToDisplay;
   }
 
   goToDetailPage(clickedSubReddit) {
