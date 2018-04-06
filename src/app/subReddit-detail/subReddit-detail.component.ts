@@ -39,6 +39,7 @@ export class SubRedditDetailComponent implements OnInit {
   }
 
   newpost() {
+    console.log("here");
     if (this.showSubmitDiv == false) {
       this.showSubmitDiv = true;
     } else {
@@ -46,12 +47,15 @@ export class SubRedditDetailComponent implements OnInit {
     }
   }
 
-  submitAPost() {
+  submitaPost(text, title) {
+    // console.log(text);
     if (this.showSubmitDiv == false) {
       this.showSubmitDiv = true;
     } else {
       this.showSubmitDiv = false;
     }
+    // console.log(this.subRedditToDisplay);
+    this.subRedditService.addPost(this.subRedditToDisplay, text, title);
   }
 
   goToDetailPage(clickedSubReddit) {

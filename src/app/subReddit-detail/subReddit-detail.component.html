@@ -5,7 +5,7 @@
 
   <div class="col-lg-9">
     <div *ngIf="showSubmitDiv == true">
-      <form class="newPost" action="index.html" method="post">
+      <form class="newPost" method="post">
         <div #submitAPost class="container submitAPost" *ngIf="showSubmitDiv == true">
           <div (click)="newpost()" class="alignRight closeThis">X</div>
           <h3>submit to reddit</h3>
@@ -24,7 +24,7 @@
 
           <!-- <h3>Choose where to post</h3>
           <input type="text" name="" value=""> -->
-          <button (click)="submitAPost()" class="finalizePost" type="button" name="button">Submit</button>
+          <button (click)="submitaPost(subRedditToDisplay,title.value,text.value)" type="button" name="button">Submit</button>
         </div>
       </form>
     </div>

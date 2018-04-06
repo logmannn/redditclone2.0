@@ -26,6 +26,15 @@ export class SubRedditService {
     this.subReddits.push(newSubReddit);
   }
 
+  addPost(currentSubReddit, text, title){
+    console.log(text+ " "+ title);
+    let subRedditEntryInFirebase = this.getSubRedditById(currentSubReddit.$key);
+    subRedditEntryInFirebase.update({
+      description: "test I'm a lone paintbrush behind Reign of Sin and Rule of Virtue - a series of hand-painted playing card illustrations inspired by the deadly sins and heavenly virtues. My playing card projects are creator-owned, one-woman efforts made possible entirely by the continuing support of my amazing patrons! Thank you for joining me on this journey through strange (and often dangerous) lands..."
+      // posts: currentSubReddit.posts.push({text: text, title: text})
+    });
+  }
+
   getSubRedditById(subRedditId: string) {
     return this.database.object('subReddits/' + subRedditId);
   }
@@ -35,7 +44,9 @@ export class SubRedditService {
     let subRedditEntryInFirebase = this.getSubRedditById(localUpdatedSubReddit.$key);
     subRedditEntryInFirebase.update({organization: localUpdatedSubReddit.organization,
                                 project: localUpdatedSubReddit.project,
-                                description: localUpdatedSubReddit.description, rewards: localUpdatedSubReddit.rewards});
+                                description: localUpdatedSubReddit.description,
+                                rewards: localUpdatedSubReddit.rewards
+                              });
 
   }
 
