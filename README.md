@@ -1,29 +1,31 @@
-# Logreon
+# RedditClone
 
-## A crowd-sourcing site for Logan's and Ron's alike.
+## firebase link:
+https://reddit-clone-8f007.firebaseapp.com/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Completed Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<ul>
+  <li>Hard coded posts</li>
+  <li>Submitting Posts</li>
+  <li>Items are compartmentalized</li>
+</ul>
 
-## Build
+## Future Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<ul>
+  <li>Working subreddits</li>
+  <li>Personal user accounts</li>
+  <li>Upvoting and downvoting</li>
+  <li>Sort posts based on points</li>
+  <li>Comment Sorting</li>
+  <li>Reddit pages for posts</li>
+  <li>Adding comments on posts</li>
+  <li>Adding comments in comment chain</li>
+</ul>
